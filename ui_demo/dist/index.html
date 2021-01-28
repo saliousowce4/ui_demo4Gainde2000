@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Démo</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<div class="d-md-flex h-md-100 align-items-center">
+    <div class="col-md-6 p-0 bg-indigo h-md-100">
+        <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
+            <div class="logoarea pt-5 pb-5">
+                <p>
+                    <i class="fa fa-anchor fa-3x"></i>
+                </p>
+                <h1 class="mb-0 mt-3 display-4">Auteur : Abdoulaye S. SECK</h1>
+                <h5 class="mb-4 font-weight-light">Bootsrap UI gratuit <i class="fab fa-sass fa-2x text-cyan"></i></h5>
+                <a target="_blank" class="btn btn-outline-light btn-lg btn-round"
+                   href="#">Voir tout</a>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 p-0 bg-white h-md-100 loginarea lign-items-center justify-content-center">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <div class="stepwizard ">
+            <div class="stepwizard-row setup-panel">
+                <div class="stepwizard-step col-xs-3">
+                    <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
+                    <p><small>Transport</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                    <p><small>Destination</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                    <p><small>Rangement</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                    <p><small>Cargo</small></p>
+                </div>
+            </div>
+        </div>
+
+        <form role="form">
+            <div class="panel panel-success setup-content" id="step-1">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Transport</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="control-label">Prénom</label>
+                        <input maxlength="100" type="text" required="required" class="form-control"
+                               placeholder="Enter First Name"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Nom</label>
+                        <input maxlength="100" type="text" required="required" class="form-control"
+                               placeholder="Enter Last Name"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Email</label>
+                        <input maxlength="100" type="email" required="required" class="form-control"
+                               placeholder="Enter Last Name"/>
+                    </div>
+                    <p>Selectionner votre sexe:</p>
+
+                    <div>
+                        <input type="radio" id="dewey" name="drone" value="dewey">
+                        <label for="dewey">Homme</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="louie" name="drone" value="louie">
+                        <label for="louie">Femme</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Extensions autorisées : docx, doc, pdf</label>
+
+                        <input type="file" id="file"
+                               onchange="return fileValidation()"/></div>
+                    <button class="btn btn-primary nextBtn pull-right" type="button">Suivant</button>
+                </div>
+            </div>
+
+            <div class="panel panel-success setup-content" id="step-2">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Destination</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="control-label">Nom</label>
+                        <input maxlength="200" type="text" required="required" class="form-control"
+                               placeholder="Enter Company Name"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Compagnie</label>
+                        <input maxlength="200" type="text" required="required" class="form-control"
+                               placeholder="Enter Company Address"/>
+                    </div>
+                    <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                </div>
+            </div>
+
+            <div class="panel panel-success setup-content" id="step-3">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Schedule</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="control-label"> Nom</label>
+                        <input maxlength="200" type="text" required="required" class="form-control"
+                               placeholder="Enter Company Name"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Compagnie</label>
+                        <input maxlength="200" type="text" required="required" class="form-control"
+                               placeholder="Enter Company Address"/>
+                    </div>
+                    <button class="btn btn-primary nextBtn pull-right" type="button">Suivant</button>
+                </div>
+            </div>
+
+            <div class="panel panel-success setup-content" id="step-4">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Cargo</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="control-label">Nom</label>
+                        <input maxlength="200" type="text" required="required" class="form-control"
+                               placeholder="Enter Company Name"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label"> Adress</label>
+                        <input maxlength="200" type="text" required="required" class="form-control"
+                               placeholder="Enter Company Address"/>
+                    </div>
+                    <button class="btn btn-success pull-right" type="submit">Fin!</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='script.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/popper.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js'></script>
+</body>
+</html>
